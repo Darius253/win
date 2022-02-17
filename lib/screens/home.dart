@@ -15,8 +15,9 @@ class _HomePageState extends State<HomePage> {
     return Column(
       children: [
         appbar(),
-        const MainScreeen(),
-       ],
+        const Divider(direction: Axis.horizontal),
+        const Expanded(child:  MainScreeen()),
+      ],
     );
   }
 }
