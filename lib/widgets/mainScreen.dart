@@ -1,6 +1,8 @@
 
 
 
+// ignore_for_file: file_names
+
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:win/widgets/sidemenu.dart';
 
