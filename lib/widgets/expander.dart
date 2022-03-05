@@ -1,7 +1,8 @@
 import 'package:fluent_ui/fluent_ui.dart';
 
 Widget expanderItems() {
-  return Column(children: [
+  return 
+  Column(children: [
     GestureDetector(
       child: const ListTile(
         leading: Icon(FluentIcons.home_solid),
@@ -116,7 +117,7 @@ Widget expanderItems() {
 
 
     Expander(
-      leading: const Icon(FluentIcons.circle_dollar),
+      leading: const Icon(FluentIcons.circle_dollar,color: Colors.black,),
       header: const Text('Customers'),
       content: Column(children: const [
         ListTile(
@@ -155,50 +156,214 @@ Widget expanderItems() {
           .down, // (optional). Defaults to ExpanderDirection.down
       initiallyExpanded: false, // (false). Defaults to false
     ),
-    const Expander(
-      leading: Icon(FluentIcons.sell),
-      header: Text('Vendors'),
-      content: Text('More'),
+
+
+    //  Vendors Expander
+     Expander(
+      leading: const Icon(FluentIcons.sell, color: Colors.black,),
+      header: const Text('Vendors'),
+      content:  Column(children: const [
+        ListTile(
+          title: Text('Vendor Center'),
+        ),
+        ListTile(
+          title: Text('Enter Bills'),
+        ),
+        ListTile(
+          title: Text('Pay Bills'),
+        ),
+        ListTile(
+          title: Text('Bill Tracker'),
+        ),
+        ListTile(
+          title: Text('Item List'),
+        ),
+        ListTile(
+          title: Text(' Supplier/Vendor List'),
+        ),
+        ListTile(
+          title: Text('Checks'),
+        ),
+        ListTile(
+          title: Text('Sales Tax'),
+        ),
+        
+      ]),
       direction: ExpanderDirection
           .down, // (optional). Defaults to ExpanderDirection.down
       initiallyExpanded: false, // (false). Defaults to false
     ),
-    const Expander(
-      leading: Icon(FluentIcons.people),
-      header: Text('Employess'),
-      content: Text('More'),
+
+    // Employees Expander 
+     Expander(
+      leading: const Icon(FluentIcons.people, color: Colors.black,),
+      header: const Text('Employess'),
+      content:  Column(children: const [
+        ListTile(
+          title: Text('Employee Center'),
+        ),
+        ListTile(
+          title: Text('Vendors'),
+        ),
+        ListTile(
+          title: Text('Bills'),
+        ),
+        ListTile(
+          title: Text('Bill Payments'),
+        ),
+        ListTile(
+          title: Text('Checks'),
+        ),
+        ListTile(
+          title: Text('Credit Card Activities'),
+        ),
+        ListTile(
+          title: Text('Enter Time'),
+        ),
+        
+      ]),
       direction: ExpanderDirection
           .down, // (optional). Defaults to ExpanderDirection.down
       initiallyExpanded: false, // (false). Defaults to false
     ),
-    const Expander(
-      leading: Icon(FluentIcons.bank),
-      header: Text('Banking'),
-      content: Text('More'),
+
+    // BAnking Expander
+     Expander(
+      leading: const Icon(FluentIcons.bank_solid),
+      header: const Text('Banking'),
+      content:  Column(children: const [
+        ListTile(
+          title: Text('Accounts '),
+        ),
+        ListTile(
+          title: Text('Transfers'),
+        ),
+        ListTile(
+          title: Text('Transactions'),
+        ),
+        ListTile(
+          title: Text('Bank Feeds'),
+        ),
+      ]),
       direction: ExpanderDirection
           .down, // (optional). Defaults to ExpanderDirection.down
       initiallyExpanded: false, // (false). Defaults to false
     ),
-    const Expander(
-      leading: Icon(FluentIcons.shopping_cart),
-      header: Text('Procurement'),
-      content: Text('More'),
+
+
+    /// Proccurement Expander
+     Expander(
+      leading: const Icon(FluentIcons.shopping_cart_solid, ),
+      header: const Text('Procurement'),
+      content:  Wrap(children: const [
+        ListTile(
+          title: Text('LPO Requisition'),
+        ),
+        ListTile(
+          title: Text('LPO Authorization'),
+        ),
+        ListTile(
+          title: Text('LPO Order'),
+        ),
+        ListTile(
+          title: Text('LPO/Invoice Payment Approval'),
+        ),
+        ListTile(
+          title: Text('Sub Reports'),
+        ),
+        
+      ]),
       direction: ExpanderDirection
           .down, // (optional). Defaults to ExpanderDirection.down
       initiallyExpanded: false, // (false). Defaults to false
     ),
+
+
+    // Items 
     const Expander(
-      leading: Icon(FluentIcons.list),
+      leading: Icon(FluentIcons.list, color: Colors.black,),
       header: Text('Items'),
       content: Text('More'),
       direction: ExpanderDirection
           .down, // (optional). Defaults to ExpanderDirection.down
       initiallyExpanded: false, // (false). Defaults to false
     ),
-    const Expander(
-      leading: Icon(FluentIcons.report_document),
-      header: Text('Reports'),
-      content: Text('More'),
+    
+
+    // Reports Expander
+     Expander(
+      leading: const Icon(FluentIcons.report_document, color: Colors.black,),
+      header: const Text('Reports'),
+      content:  Wrap(children: const [
+        ListTile(
+          title: Text('List'),
+        ),
+        ListTile(
+          title: Text('Company & Receivables'),
+        ),
+        ListTile(
+          title: Text('Vendors & Payables'),
+        ),
+        ListTile(
+          title: Text('Accountable & Taxes'),
+        ),
+        ListTile(
+          title: Text('Revenue'),
+        ),
+        
+      ]),
+      direction: ExpanderDirection
+          .down, // (optional). Defaults to ExpanderDirection.down
+      initiallyExpanded: false, // (false). Defaults to false
+    ),
+
+
+    // MIscellanious Expander
+    Expander(
+      leading: const Icon(FluentIcons.settings, color: Colors.black,),
+      header: const Text('Miscellaneous'),
+      content:  Wrap(children: const [
+        ListTile(
+          title: Text('Calculator'),
+        ),
+        ListTile(
+          title: Text('Ofc Notes'),
+        ),
+        ListTile(
+          title: Text('BatchCom'),
+        ),
+        ListTile(
+          title: Text('Configure Tracks'),
+        ),
+        ListTile(
+          title: Text('Password'),
+        ),
+        
+        ListTile(
+          title: Text('Preferences')),
+          
+        ListTile(
+          title: Text('New Documents')),
+          
+        ListTile(
+          title: Text('Dcument Templates')),
+        
+      ]),
+      direction: ExpanderDirection
+          .down, // (optional). Defaults to ExpanderDirection.down
+      initiallyExpanded: false, // (false). Defaults to false
+    ),
+
+    /// Administration Expander
+    Expander(
+      leading: const Icon(FluentIcons.settings_secure, color: Colors.black,),
+      header: const Text('Administration'),
+      content:  Wrap(children: const [
+        ListTile(
+          title: Text('Addr Book'),
+        ),
+        
+      ]),
       direction: ExpanderDirection
           .down, // (optional). Defaults to ExpanderDirection.down
       initiallyExpanded: false, // (false). Defaults to false
