@@ -1,6 +1,7 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:win/widgets/expander.dart';
 
+
 class SideMenu extends StatefulWidget {
   const SideMenu({Key? key}) : super(key: key);
 
@@ -24,7 +25,7 @@ class _SideMenuState extends State<SideMenu> {
     return SingleChildScrollView(
       child: Container(
         color: const Color.fromARGB(255, 213, 236, 225),
-        width: 350,
+        width: 300,
         padding: const EdgeInsets.only(top: 10),
         child: Scrollbar(
           controller: _controller,
@@ -33,8 +34,8 @@ class _SideMenuState extends State<SideMenu> {
               controller: _controller,
               child: Column(
                 children: [
-                  SizedBox(
-                    width: 150,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 70.0),
                     child: Combobox<String>(
                       comboboxColor: const Color.fromARGB(255, 160, 241, 201),
                       placeholder: const Text('Default'),
@@ -54,32 +55,33 @@ class _SideMenuState extends State<SideMenu> {
                       },
                     ),
                   ),
-                  Row(
-                    children: [
-                      const SizedBox(
-                        width: 40,
-                      ),
-                      Checkbox(
-                        checked: _checked,
-                        onChanged: (value) => setState(() => _checked = value!),
-                      ),
-                      const Text(
-                        'Top',
-                        style: TextStyle(color: Colors.black),
-                      ),
-                      const SizedBox(
-                        width: 60,
-                      ),
-                      const Text(
-                        'Bot',
-                        style: TextStyle(color: Colors.black),
-                      ),
-                      Checkbox(
-                        checked: !_checked,
-                        onChanged: (value) =>
-                            setState(() => _checked = !value!),
-                      ),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal:60.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Checkbox(
+                          checked: _checked,
+                          onChanged: (value) => setState(() => _checked = value!),
+                        ),
+                        const Text(
+                          'Top',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        const SizedBox(
+                          width: 60,
+                        ),
+                        const Text(
+                          'Bot',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        Checkbox(
+                          checked: !_checked,
+                          onChanged: (value) =>
+                              setState(() => _checked = !value!),
+                        ),
+                      ],
+                    ),
                   ),
                   expanderItems()
                 ],
